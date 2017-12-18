@@ -1,0 +1,30 @@
+
+
+<% if current_user && current_user.is_admin %>
+
+  <%= form_with model: @book do |form| %>
+
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :price %><br>
+    <%= form.text_field :price %>
+  </p>
+
+  <p>
+    <%= form.label :count %><br>
+    <%= form.text_field :count %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+  <% end %>
+
+<% else %>
+  You have no permissions to edit this
+<% end %>

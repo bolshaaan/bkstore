@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(users_params)
     if @user.save
       flash[:success] = "Account registered!"
-      redirect_to root_path
+      redirect_to books_path
     else
       render :new
     end

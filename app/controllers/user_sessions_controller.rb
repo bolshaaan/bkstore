@@ -6,7 +6,7 @@ class UserSessionsController < ApplicationController
   def create
     @user_session = UserSession.new(user_session_params)
     if @user_session.save
-      redirect_to :articles
+      redirect_to books_path
     else
       render :action => :new
     end

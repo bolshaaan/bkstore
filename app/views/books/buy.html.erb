@@ -1,0 +1,21 @@
+
+<!--<div class="container">-->
+  <!--<% flash.each do |key, value| %>-->
+    <!--<div class="alert alert-<%= key %>">-->
+      <!--<%= value %>-->
+    <!--</div>-->
+  <!--<% end %>-->
+
+  <!--<%= yield %>-->
+<!--</div>-->
+
+<% if flash[:error] %>
+  <%= flash[:error] %>
+<% else %>
+  You have just bought book!
+<% end %>
+
+
+<% link_to "Back", books_path %>
+
+

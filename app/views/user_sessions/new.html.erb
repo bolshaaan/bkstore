@@ -1,5 +1,16 @@
 <div class="page-header"><h1>Sign In</h1></div>
 
+<div class="container">
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+      <%= value %>
+    </div>
+  <% end %>
+
+  <%= yield %>
+</div>
+
+
 <%= form_for @user_session do |f| %>
   <%= render 'shared/errors', object: @user_session %>
 
